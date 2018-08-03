@@ -6,7 +6,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/myjs.js"></script>
 
-<link rel="stylesheet" href="css/jquery-ui.min.ss">
+<link rel="stylesheet" href="css/jquery-ui.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/mycss.css">
 
