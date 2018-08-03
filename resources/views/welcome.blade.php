@@ -5,7 +5,6 @@
 @endsection
 
 @section('contents')
-
     {{-- 幻燈片 --}}
     <div class="container-fluid after_nav" style="padding: 0;">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -29,6 +28,10 @@
                     <img src="http://placehold.it/1170x613" alt="錯誤載入" style="width:100%;height:450px;cursor: default;">
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8edaa821509d805ae1ffe254296cac242b579056
         </div>
     </div>
 
@@ -73,9 +76,7 @@
             @endfor
         </div>
     </div>
-
 @endsection
-
+@include('layouts.iconlist')
 @section('scripts')
-
 @endsection
