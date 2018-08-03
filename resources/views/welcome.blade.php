@@ -30,11 +30,11 @@
                 </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="max-height: 450px;">
-                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="fas fa-chevron-left"></span>
                 <span class="sr-only">Previous</span>
             </a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next" style="max-height: 450px;">
-                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="fas fa-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
@@ -59,7 +59,7 @@
             @endfor
         </div>
     </div>
-    
+
     {{-- 熱門文章 --}}
     <div class="container" style="border-bottom:1px solid #e0e0eb;">
         <div style="text-align: center;margin-top: 20px;margin-bottom: 20px;">
