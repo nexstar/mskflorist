@@ -1,0 +1,667 @@
+body {
+    font-family: 'Roboto', 'Noto Sans TC', Microsoft JhengHei, Helvetica, Arial, sans-serif !important;
+	cursor: default;
+}
+
+
+p {
+    letter-spacing: 2px;
+    line-height: 1.7;
+    margin: 0;
+    /*text-align: justify;*/
+}
+
+img {
+    cursor: pointer;
+}
+
+#shop_nav_link {
+    position: relative;
+}
+
+#shop_nav_link:hover ul {
+    display: block;
+}
+
+#shop_nav_list {
+    position: absolute;
+    width: 150px;
+    top: 40px;
+    right: 0px;
+    background-color: #555;
+    padding: 10px;
+    display: none;
+    list-style-type: none;
+}
+
+#shop_nav_list li {
+    padding: 0;
+}
+
+#shop_nav_list li a {
+    color: white;
+    text-decoration: none;
+}
+
+#shop_nav_list li a:hover {
+    color: black;
+}
+
+
+
+/*讓商品nav的列表只顯示在手機板*/
+
+.mb_shop_list {
+    display: none !important;
+}
+
+#myNavbar {
+    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    opacity: 0.8;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#myNavbar>ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+#myNavbar>ul>li {
+    padding-right: 20px;
+    padding-left: 20px;
+    display: block;
+    width: 150px;
+    float: left;
+}
+
+#myNavbar>ul>li>a {
+    font-family: Roboto;
+    line-height: 50px;
+    color: #9E9E9F;
+    text-decoration: none;
+    padding-bottom: 40px;
+}
+
+#myNavbar>ul>li>a:hover {
+    color: black;
+}
+
+
+#nav_ul {
+    padding-left: 0;
+}
+
+
+
+/*nav的icon*/
+
+.nav_icon_left {
+    display: none;
+}
+
+.nav_icon_right {
+    display: none;
+}
+
+.after_nav {
+    margin-top: 110px;
+}
+
+
+.contact_list {
+    padding-left: 10px;
+}
+
+.contact_list>i {
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .icon_row {
+        height: 50px;
+    }
+
+    #myNavbar {
+        padding: 0;
+        background-color: black;
+    }
+
+    #myNavbar ul li a {
+        color: white;
+    }
+
+    #nav_ul {
+        display: none !important;
+        padding-left: 40px;
+    }
+
+
+    .nav_icon_right {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 28px;
+        color: white;
+    }
+
+    .nav_icon_left {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 28px;
+        color: white;
+    }
+
+    .after_nav {
+        margin-top: 50px;
+    }
+
+    .center_icon {
+        display: none !important;
+    }
+
+    .carousel-inner>div>img {
+        /*        height: 70% !important;*/
+        transform: translateY(0%) !important;
+    }
+
+    #footer_url_list li {
+        width: 100% !important;
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /*WEDO toolbar*/
+    #wrapper ul {
+        padding-left: 10px !important;
+    }
+
+    #wrapper ul li {
+        padding: 10px !important;
+        width: 100%;
+        margin: 0;
+    }
+
+    .wrapper_input input {
+        width: 60% !important;
+    }
+
+    .wrapper_input {
+        padding-left: 10%;
+    }
+
+    .contact_list {
+        text-align: center;
+    }
+
+    .mb_shop_list {
+        display: block !important;
+    }
+
+    #shop_nav_link {
+        display: none !important;
+    }
+
+    .fixed-footer {
+        position: relative !important;
+    }
+
+    .lay {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+
+    .lay>img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    #nav_ul {
+        display: inline-block !important;
+    }
+}
+
+
+
+#footer_url_list {
+    list-style-type: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#footer_url_list li {
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+#wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+#wrapper ul li {
+    float: left;
+    padding: 30px;
+}
+
+
+#shop_right_wrapper a {
+    color: black;
+}
+
+#shop_right_wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#shop_right_wrapper>ul>li {
+    padding: 15px;
+    border-bottom: 1px solid #999999;
+}
+
+#shop_right_wrapper>ul>li>div>ul>li {
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*覆寫tab css*/
+
+.nav-tabs {
+    border-bottom: 1px solid #006737;
+}
+
+.nav-tabs>li>a {
+    background-color: #006737;
+    color: white;
+    border-radius: 0;
+}
+
+.nav-tabs>li>a:hover {
+    background-color: #80B49C;
+    color: white;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus {
+    border: 1px solid #006737;
+    border-bottom-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*文章段落標題*/
+
+.p_title {
+    font-size: 2.4rem;
+    color: #006737;
+}
+
+/*ul li {
+    letter-spacing: 3px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}*/
+
+
+.collapse_animation {
+    animation-name: open_rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open_rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*輪播*/
+
+.your-class {
+    /*width: 500px;*/
+    /*width: 100%;*/
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+}
+
+.your-class img {
+    /*width: 100px;*/
+    margin: 0 auto;
+}
+
+.slide-image-cover {
+    background-color: #107a00;
+    position: absolute;
+    z-index: 10;
+    top: 0px;
+    left: 39px;
+    height: 145px;
+    width: 190px;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.slide-image-cover:hover {
+    opacity: 0.8;
+}
+
+.slide-image-cover>h3 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    /*    margin: 0;*/
+    margin-top: -30px;
+    line-height: 145px;
+    transition: .5s ease;
+}
+
+.slide-image-cover>h3:hover {
+    margin-top: 0;
+}
+
+
+.slide-arrow-next {
+    position: absolute;
+    top: 50%;
+    /*right: -50px;*/
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.slide-arrow-prev {
+    position: absolute;
+    top: 50%;
+    /*left: -50px;*/
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.bg-container {
+    background-image: url("../image/hd_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 0;
+}
+
+.pop_row {
+    padding: 0 15px;
+    text-align: center;
+    position: absolute;
+    top: 20vh;
+    z-index: 10;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.icon_list {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+.icon_list div div {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 10px 0 10px 10px;
+    overflow: hidden;
+}
+
+.icon_list div:hover div {
+    width: 150px;
+    transition: 0.5s ease;
+}
+
+.icon_list div div img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon_list div div span {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    opacity: 0;
+    transition: 0.5s ease;
+    transition-delay: 0.3s;
+    position: relative;
+    top: 3px;
+    right: -20px;
+}
+
+.icon_list div:hover div span {
+    opacity: 1;
+    position: relative;
+    top: 3px;
+    right: 0;
+}
+
+.icon_list a {
+    text-decoration: none;
+    display: block;
+}
+
+/*每個元素要分開擺放，要不然其中一個div變寬時，會影響其他div的位置
+    (因為元素靠左擺，所以這情況只會在container固定在右側才會發生)*/
+
+.li1 {
+    position: absolute;
+    top: -300px;
+    right: 0;
+    display: none;
+}
+
+.li2 {
+    position: absolute;
+    top: -240px;
+    right: 0;
+    display: none;
+}
+
+.li3 {
+    position: absolute;
+    top: -180px;
+    right: 0;
+    display: none;
+}
+
+.li4 {
+    position: absolute;
+    top: -120px;
+    right: 0;
+    display: none;
+}
+
+.li5 {
+    position: absolute;
+    top: -60px;
+    right: 0;
+}
+
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 20;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: not-allowed;
+    /* Add a pointer on hover */
+}
+
+.lay {
+    position: fixed;
+    display: none;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    background-color: #3ACE01;
+    z-index: 21;
+    border-radius: 4px;
+}
+
+.lay>img {
+    width: 100px;
+    height: 100px;
+}
+
+.lay>h3 {
+    margin: 0;
+    display: inline-block;
+    color: white;
+}
+
+.lay>span {
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
+}
+
+.lay>p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.lay>div {
+    border: 3px solid white;
+    margin: 0 80px;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.lay>div>a {
+    color: white;
+    font-size: 18px;
+}
+/* pager*/
+#pager{
+    list-style-type: none;
+    padding: 0;
+}
+
+#pager > li{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #c2c2d6;
+    text-align: center;
+}
+
+#pager > li > a{
+    line-height: 27px;
+    font-size: 16px;
+    color: #006737;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#pager > li:hover{
+    background-color: #006737;
+}
+
+#pager > li:hover > a{
+    color: #FFFFFF;
+}
+
