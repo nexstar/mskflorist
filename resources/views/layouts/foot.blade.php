@@ -22,8 +22,6 @@
                                 <a href="Shop1.php" style="text-decoration: none; color: white;">來自朋友們的肯定</a>
                             </li>
                             <li><a href="Contact.php" style="text-decoration: none; color: white;">聯絡我們</a></li>
-                        </ul>
-                    </div>
                             <li><a href="Contact.php" style="text-decoration: none; color: white;">聯絡我們</a></li>
                         </ul>
                     </div>

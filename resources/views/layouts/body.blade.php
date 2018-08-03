@@ -2,7 +2,6 @@
 <html>
     @include('layouts.linkscript')
     @yield('title')
-
 <body>
 </body>
     @include('layouts.top')
