@@ -30,11 +30,11 @@
                 </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="max-height: 450px;">
-                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="fas fa-chevron-left"></span>
                 <span class="sr-only">Previous</span>
             </a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next" style="max-height: 450px;">
-                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="fas fa-chevron-right"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
