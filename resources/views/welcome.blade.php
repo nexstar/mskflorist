@@ -44,7 +44,7 @@
                         <p style="font-size: 1.8rem;color: #006737;">商品敘述</p>
                     </div>
                     <div style="text-align: center;">
-                        <a href="#" class="btn" style="color: #5e5e5e;background-color: #dcdcdc;border-radius: 0;">了解詳情&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a href="{{ route('shops.sub', ['id' => 1, 'type' => 0]) }}" class="btn" style="color: #5e5e5e;background-color: #dcdcdc;border-radius: 0;">了解詳情&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                 </div>
             @endfor
@@ -59,8 +59,8 @@
         <div class="row" style="padding-bottom: 20px;">
             @for($i=0;$i<4;$i++)
                 <div class="col-md-3" style="text-align: center">
-                    <a href="#">
-                        <img src="http://placehold.it/1170x613" alt="照片" width="100%" style="cursor: default;">
+                    <a href="{{ url('/articles') }}">
+                        <img src="http://placehold.it/1170x613" alt="錯誤" width="100%" style="cursor: default;">
                         <div style="text-align: center;margin:10px 0 10px 0;">
                             <p style="font-size: 1.8rem;color: #006737;">文章標題</p>
                         </div>
@@ -72,6 +72,7 @@
             @endfor
         </div>
     </div>
+
 	@include('layouts.iconlist')
 @endsection
 @section('scripts')
