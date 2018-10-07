@@ -12,20 +12,16 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
-            <div class="carousel-inner" style="max-height: 450px;">
+            <div class="carousel-inner" style="max-height:500px;">
                 <div class="item active">
-                    <img src="http://placehold.it/1170x613" alt="錯誤載入" style="width:100%;height:450px;cursor: default;">
+                    <img src="{{ env('SERVER_IMAGE_PATH').'/images/slide/'.$slide[0]->src }}" alt="錯誤載入" style="width:100%;height:100%;cursor: default;">
                 </div>
                 <div class="item">
-                    <img src="http://placehold.it/1170x613" alt="錯誤載入" style="width:100%;height:450px;cursor: default;">
+                    <img src="{{ env('SERVER_IMAGE_PATH').'/images/slide/'.$slide[1]->src }}" alt="錯誤載入" style="width:100%;height:100%;cursor: default;">
                 </div>
                 <div class="item">
-                    <img src="http://placehold.it/1170x613" alt="錯誤載入" style="width:100%;height:450px;cursor: default;">
-                </div>
-                <div class="item">
-                    <img src="http://placehold.it/1170x613" alt="錯誤載入" style="width:100%;height:450px;cursor: default;">
+                    <img src="{{ env('SERVER_IMAGE_PATH').'/images/slide/'.$slide[2]->src }}" alt="錯誤載入" style="width:100%;height:100%;cursor: default;">
                 </div>
             </div>
         </div>
@@ -37,14 +33,14 @@
             <h4 style="font-size: 3rem;color: #006737;">熱銷商品</h4>
         </div>
         <div class="row" style="padding-bottom: 20px;">
-            @for($i=0;$i<4;$i++)
+            @for($i=0;$i<count($ShowProDuct);$i++)
                 <div class="col-md-3">
-                    <img src="http://placehold.it/1170x613" alt="照片" width="100%" style="cursor: default;">
+                    <img src="{{ env('SERVER_IMAGE_PATH').'/images/product/'.$ShowProDuct[$i]['src'] }}" alt="照片" width="100%" style="cursor: default;">
                     <div style="text-align: center;margin:10px 0 10px 0;">
-                        <p style="font-size: 1.8rem;color: #006737;">商品敘述</p>
+                        <p style="font-size: 1.8rem;color: #006737;">{{ $ShowProDuct[$i]['title'] }}</p>
                     </div>
                     <div style="text-align: center;">
-                        <a href="{{ route('shops.sub', ['id' => 1, 'type' => 0]) }}" class="btn" style="color: #5e5e5e;background-color: #dcdcdc;border-radius: 0;">了解詳情&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a href="{{ route('shops.subindex', ['id' => $ShowProDuct[$i]['id'], 'type' => 0]) }}" class="btn" style="color: #5e5e5e;background-color: #dcdcdc;border-radius: 0;">了解詳情&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                 </div>
             @endfor
@@ -57,15 +53,28 @@
             <h4 style="font-size: 3rem;color: #006737;">熱門文章</h4>
         </div>
         <div class="row" style="padding-bottom: 20px;">
-            @for($i=0;$i<4;$i++)
-                <div class="col-md-3" style="text-align: center">
-                    <a href="{{ url('/articles') }}">
-                        <img src="http://placehold.it/1170x613" alt="錯誤" width="100%" style="cursor: default;">
+            {{--hotarticle--}}
+            @for($i=0;$i<count($ShowArticle);$i++)
+                <div class="col-md-3" style="cursor: pointer;text-align: center;">
+                    <a style="color: black;" href="{{ route('articles.subindex', $ShowArticle[$i]['id']) }}">
+                        <img src="{{ env('SERVER_IMAGE_PATH').'/images/article/'.$ShowArticle[$i]['src'] }}" alt="錯誤" width="100%">
                         <div style="text-align: center;margin:10px 0 10px 0;">
-                            <p style="font-size: 1.8rem;color: #006737;">文章標題</p>
+                            <p style="font-size: 1.8rem;color: #006737;">
+                                @if(mb_strlen( $ShowArticle[$i]['title']) < 33)
+                                    {{ $ShowArticle[$i]['title'] }}
+                                @else
+                                    {{ mb_substr($ShowArticle[$i]['title'],0,30,"utf-8").'...' }}
+                                @endif
+                            </p>
                         </div>
                         <div>
-                            <p class="text-justify">文章說明</p>
+                            <p>
+                                @if(mb_strlen( $ShowArticle[$i]['content']) < 33)
+                                    {{ $ShowArticle[$i]['content'] }}
+                                @else
+                                    {{ mb_substr($ShowArticle[$i]['content'],0,30,"utf-8").'...' }}
+                                @endif
+                            </p>
                         </div>
                     </a>
                 </div>

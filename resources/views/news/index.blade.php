@@ -15,17 +15,22 @@
         <div class="container" style="margin-top: 20px;">
             <div class="row" style="margin-bottom: 20px;">
 
-                @for($i=0;$i<12;$i++)
+                @foreach($news as $newslist )
                 <div class="col-md-4" style="margin-bottom: 20px;">
                     <div style="text-align: center;">
-                        <img src="http://placehold.it/1170x613" alt="錯誤" width="100%">
+                        <img src="{{ env('SERVER_IMAGE_PATH').'/images/new/'.$newslist->left['url'] }}" alt="錯誤" width="100%">
                     </div>
+                    <h4>
+                        @if(mb_strlen($newslist->title) < 30)
+                            {{ $newslist->title }}
+                        @else
+                            {{ mb_substr($newslist->title,0,30,"utf-8").'...' }}
+                        @endif
+                    </h4>
 
-                    <h4>新聞標題</h4>
-                    <a href="{{ route('news.sub', $i) }}" class="btn" style="color: #5e5e5e;background-color: transparent;border-radius: 0;border: 1px solid #5e5e5e;">Read&nbsp;More</a>
+                    <a href="{{ route('news.subindex', $newslist->_id) }}" class="btn" style="color: #5e5e5e;background-color: transparent;border-radius: 0;border: 1px solid #5e5e5e;">Read&nbsp;More</a>
                 </div>
-                @endfor
-
+                @endforeach
             </div>
         </div>
     </div>

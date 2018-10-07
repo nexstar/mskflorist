@@ -1,33 +1,39 @@
 <nav id="myNavbar">
     <div class="icon_row">
-        <a href="{{ url('/') }}">
-            <span class="nav_icon_left glyphicon glyphicon-list"></span>
-        </a>
+        {{--
+            <a href="{{ url('/') }}">
+                <span class="nav_icon_left glyphicon glyphicon-list"></span>
+            </a>
+        --}}
         <a id="cnav_icon_right">
             <span class="nav_icon_right glyphicon glyphicon-list"></span>
         </a>
     </div>
     <ul id="nav_ul">
-        <li class="center_icon"><a href="{{ url('/') }}">首頁</a></li>
+        {{--
+            <li class="center_icon"><a href="{{ url('/') }}">首頁</a></li>
+        --}}
         <li><a href="{{ url('/articles') }}">文章</a></li>
-        <li><a href="{{ url('/lessons') }}">課程</a></li>
-        <li id="shop_nav_link">
-            <a href="{{ url('/shops') }}">商店&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>
-                <ul id="shop_nav_list">
-                    <li><a href="{{ url('/shops') }}">商店</a></li>
-                    <li><a href="{{ url('/shops/cart') }}">購物車</a></li>
-                    <li><a href="{{ url('/shops/buy') }}">結帳</a></li>
-                </ul>
-            </a>
-        </li>
-        <li class="mb_shop_list"><a href="{{ url('/shops') }}">商店</a></li>
-        <li class="mb_shop_list"><a href="{{ url('/shops/cart') }}">購物車</a></li>
-        <li class="mb_shop_list"><a href="{{ url('/shops/buy') }}">結帳</a></li>
-        <li><a href="{{ url('abouts') }}">關於凱特</a></li>
-        <li><a href="{{ url('location') }}">凱特在哪裡</a></li>
-        <li>
-            <a style="cursor: pointer;" data-toggle="modal" data-target="#login-modal-sm">登入/會員專區</a>
-        </li>
+        {{--
+            <li><a href="{{ url('/lessons') }}">課程</a></li>
+            <li id="shop_nav_link">
+                <a href="{{ url('/shops') }}">商店&nbsp;<span class="glyphicon glyphicon-chevron-down"></span>
+                    <ul id="shop_nav_list">
+                        <li><a href="{{ url('/shops') }}">商店</a></li>
+                        <li><a href="{{ url('/shops/cart') }}">購物車</a></li>
+                        <li><a href="{{ url('/shops/buy') }}">結帳</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li class="mb_shop_list"><a href="{{ url('/shops') }}">商店</a></li>
+            <li class="mb_shop_list"><a href="{{ url('/shops/cart') }}">購物車</a></li>
+            <li class="mb_shop_list"><a href="{{ url('/shops/buy') }}">結帳</a></li>
+            <li><a href="{{ url('abouts') }}">關於凱特</a></li>
+            <li><a href="{{ url('location') }}">凱特在哪裡</a></li>
+            <li>
+                <a style="cursor: pointer;" data-toggle="modal" data-target="#login-modal-sm">登入/會員專區</a>
+            </li>
+        --}}
     </ul>
 </nav>
 

@@ -1,8 +1,9 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'as' => 'index',
+    'uses' => 'IndexController@index'
+]);
 
 Route::get('/forgetpwd', 'UsersController@password_no_login')->name('password_no_login');
 
@@ -40,85 +41,144 @@ Route::get('/forgetpwd', 'UsersController@password_no_login')->name('password_no
         Route::get('/buy', 'UsersController@buy_list')->name('users.buy_list_index');
 
     });
-//Shops
+
+    //Shops
     Route::group(['prefix' => 'shops'],function(){
 
-        Route::get('/', function (){
-            return view('shops.index');
-        })->name('shops');
+        Route::get('/itemclassify/{id}/{type}',[
+            'as' => 'shops.itemclassify',
+            'uses' => 'ShopsController@itemclassify'
+        ]);
 
-        Route::get('/sub/type/{id}/{type}', function ($id, $type){
-            return view('shops.subindex', compact('id','type'));
-        })->name('shops.sub');
+        Route::get('/subviewlefttool', [
+            'as' => 'shops.subviewlefttool',
+            'uses' => 'ShopsController@subviewlefttool'
+        ]);
 
-        Route::get('/cart', function (){
-            return view('shops.cartindex');
-        })->name('shops.cart');
+        Route::get('/', [
+            'as' => 'shops.index',
+            'uses' => 'ShopsController@index'
+        ]);
 
-        Route::get('/buy', function (){
-            return view('shops.buyindex');
-        })->name('shops.buy');
+        Route::get('/highttolow', [
+            'as' => 'shops.highttolow',
+            'uses' => 'ShopsController@highttolow'
+        ]);
+
+        Route::get('/lowtohight', [
+            'as' => 'shops.lowtohight',
+            'uses' => 'ShopsController@lowtohight'
+        ]);
+
+        Route::get('/hotstatus', [
+            'as' => 'shops.hotstatus',
+            'uses' => 'ShopsController@hotstatus'
+        ]);
+
+
+
+        Route::get('/sub/type/{id}/{type}', [
+            'as' => 'shops.subindex',
+            'uses' => 'ShopsController@subindex'
+        ]);
+
+        Route::get('/cart', [
+            'as' => 'shops.cart',
+            'uses' => 'ShopsController@cart'
+        ]);
+
+        Route::get('/buy', [
+            'as' => 'shops.buy',
+            'uses' => 'ShopsController@buy'
+        ]);
 
     });
 
 //Lessons
     Route::group(['prefix' => 'lessons'],function (){
 
-        Route::get('/', function (){
-            return view('lessons.index');
-        })->name('lessons');
+        Route::get('/', [
+            'as' => 'lessons_course.index',
+            'uses' => 'CourseController@index'
+        ]);
 
-        Route::get('/sub/{id}', function ($id){
-            return view('lessons.subindex', compact('id'));
-        })->name('lessons.sub');
+        Route::get('/sub/{id}', [
+            'as' => 'lessons_course.subindex',
+            'uses' => 'CourseController@subindex'
+        ]);
 
+        Route::get('/period/{type}',[
+            'as' => 'lessons_course.period',
+            'uses' => 'CourseController@period',
+        ]);
+
+        Route::get('/history/{type}',[
+            'as' => 'lessons_course.history',
+            'uses' => 'CourseController@history',
+        ]);
     });
 
 //news
     Route::group(['prefix' => 'news'],function (){
-        Route::get('/', function (){
-            return view('news.index');
-        })->name('news');
 
-        Route::get('/sub/{id}', function ($id){
-            return view('news.subindex', compact('id'));
-        })->name('news.sub');
+        Route::get('/', [
+            'as' => 'news.index',
+            'uses' => 'NewsController@index'
+        ]);
+
+        Route::get('/sub/{id}', [
+            'as' => 'news.subindex',
+            'uses' => 'NewsController@subindex'
+        ]);
+
     });
 
 //articles
 
     Route::group(['prefix' => 'articles'], function (){
 
-        Route::get('/', function (){
-            return view('articles.index');
-        })->name('articles');
+        Route::get('/assign/{id}', [
+            'as' => 'articles.assign',
+            'uses' => 'ArticleContorller@assign'
+        ]);
 
-        Route::get('/sub/{id}',function ($id){
-            return view('articles.subindex', compact('id'));
-        })->name('articles.sub');
+        Route::get('/', [
+            'as' => 'articles.index',
+            'uses' => 'ArticleContorller@index'
+        ]);
+
+        Route::get('/sub/{id}',[
+            'as' => 'articles.subindex',
+            'uses' => 'ArticleContorller@subindex'
+        ]);
 
     });
 
 //abouts
-    Route::get('/abouts', function (){
-        return view('abouts.index');
-    })->name('abouts');
+    Route::get('/abouts', [
+        'as' => 'about.abouts',
+        'uses' => 'AboutController@abouts'
+    ]);
 
-    Route::get('/contact', function (){
-        return view('abouts.contact');
-    })->name('abouts.contact');
+    Route::get('/contact', [
+        'as' => 'about.contact',
+        'uses' => 'AboutController@contact'
+    ]);
 
-    Route::get('/termsconditions ', function (){
-        return view('abouts.termsconditions');
-    })->name('abouts.termsconditions');
+    Route::get('/termsconditions ', [
+        'as' => 'about.termsconditions',
+        'uses' => 'AboutController@termsconditions'
+    ]);
 
-    Route::get('/acknowledgement ', function (){
-        return view('abouts.acknowledgement');
-    })->name('abouts.acknowledgement');
+    Route::get('/acknowledgement ', [
+        'as' => 'about.acknowledgement',
+        'uses' => 'AboutController@acknowledgement'
+    ]);
 
-    Route::get('/location ', function (){
-        return view('abouts.address');
-    })->name('abouts.address');
+    Route::get('/location ', [
+        'as' => 'about.location',
+        'uses' => 'AboutController@location'
+    ]);
 
 //Error Page
     Route::get('/404 ', function (){

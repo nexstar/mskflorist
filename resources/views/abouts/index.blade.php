@@ -15,7 +15,7 @@
         </div>
 
         <div class="row" style="margin-bottom: 20px;">
-            <img src="http://placehold.it/1170x613" style="width: 100%;">
+            <img src="{{ env('SERVER_IMAGE_PATH').'/images/about1.jpg' }}" style="width: 100%;">
             <div style="text-align: center;">
                 <h3 class="p_title">MRS.KATE Flower 的緣起</h3>
                 <span style="font-size: 20px;">
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="row" style="margin-bottom: 20px;">
-            <img src="http://placehold.it/1170x613" style="width: 100%;">
+            <img src="{{ env('SERVER_IMAGE_PATH').'/images/about2.jpg' }}" style="width: 100%;">
             <div style="text-align: center;">
                 <h3 class="p_title">關於 MRS.KATE Flower</h3>
                 <span style="font-size: 20px;">
@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="row" style="margin-bottom: 20px;">
-            <img src="http://placehold.it/1170x613" style="width: 100%;">
+            <img src="{{ env('SERVER_IMAGE_PATH').'/images/about3.jpg' }}" style="width: 100%;">
             <div style="text-align: center;">
                 <h3 class="p_title">成立 MRS.KATE Flower</h3>
                 <span style="font-size: 20px;">
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="row" style="margin-bottom: 20px;">
-            <img src="http://placehold.it/1170x613" style="width: 100%;">
+            <img src="{{ env('SERVER_IMAGE_PATH').'/images/about4.jpg' }}" style="width: 100%;">
             <div style="text-align: center;">
                 <h3 class="p_title">情感與祝福</h3>
                 <span style="font-size: 20px;">
